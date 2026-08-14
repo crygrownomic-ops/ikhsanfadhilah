@@ -1,0 +1,14 @@
+SEO DASAR — Urai Ikhsan Fadhilah
+
+SUDAH DIPASANG:
+- title SEO
+- meta description
+- robots index/follow
+- author, keywords, theme-color
+- Open Graph & Twitter Card
+- Schema.org Person (JSON-LD)
+- robots.txt
+- sitemap.xml template
+
+PENTING:
+Sitemap membutuhkan URL publik GitHub Pages yang tepat. Jangan upload sitemap.xml template sebelum mengganti SITE_URL_REPLACE_ME dengan URL website Abah. Setelah URL diberikan, sitemap.xml dan robots.txt bisa dibuat final tanpa mengubah desain website.

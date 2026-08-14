@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crygrownomic-ops.github.io/ikhsanfadhilah/sitemap.xml
