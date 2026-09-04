@@ -10,6 +10,9 @@
 <meta name="twitter:image" content="assets/foto-abah.jpg">
 <title>Urai Ikhsan Fadhilah | Executive Portfolio & Digital Solution Specialist</title>
 
+<!-- FAVICON SVG MONOGRAM (EMAS EKSEKUTIF) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23080e1a'/><circle cx='50' cy='50' r='44' fill='none' stroke='%23c7a35b' stroke-width='4'/><text x='50%' y='62%' font-family='Georgia, serif' font-size='48' font-weight='bold' fill='%23fbbf24' text-anchor='middle'>U</text></svg>">
+
 <!-- GOOGLE FONTS, LUCIDE ICONS, & AOS ANIMATION CDN -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +75,7 @@ nav {
 .brand span { color: var(--accent-gold); }
 .navlinks {
   display: flex;
-  gap: 28px;
+  gap: 24px;
   color: var(--text-muted);
   font-size: 13px;
   font-weight: 600;
@@ -81,17 +84,23 @@ nav {
 .navlinks a { transition: color 0.25s ease; }
 .navlinks a:hover { color: #fff; }
 
+.cta-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 .navcta {
   border: 1px solid var(--border-gold);
   background: rgba(199, 163, 91, 0.08);
-  padding: 10px 18px;
+  padding: 8px 16px;
   border-radius: 999px;
   color: var(--accent-gold-light);
   font-size: 12px;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   transition: all 0.3s ease;
 }
 .navcta:hover {
@@ -582,6 +591,7 @@ footer {
   .job-item { padding-top: 0; padding-left: 24px; border-left: 2px solid var(--border); }
   .job-item .dot { left: -8px; top: 2px; }
   .copyright { flex-direction: column; gap: 8px; }
+  .cta-group { flex-direction: column; width: 100%; }
 }
 </style>
 </head>
@@ -599,9 +609,14 @@ footer {
         <a href="#experience">Pengalaman</a>
         <a href="#contact">Kontak</a>
       </div>
-      <a class="navcta" href="assets/CV_Urai_Ikhsan_Fadhilah_Final.docx">
-        <i data-lucide="download"></i> Download CV
-      </a>
+      <div class="cta-group">
+        <a class="navcta" href="https://www.linkedin.com/in/uikhsanf/" target="_blank">
+          <i data-lucide="linkedin"></i> LinkedIn
+        </a>
+        <a class="navcta" href="assets/CV_Urai_Ikhsan_Fadhilah_Final.docx">
+          <i data-lucide="download"></i> CV (Word)
+        </a>
+      </div>
       <div class="mobile-menu" id="mobileMenuBtn">☰</div>
     </nav>
   </div>
@@ -614,8 +629,11 @@ footer {
   <a href="#expertise" class="mobile-link">Kompetensi</a>
   <a href="#experience" class="mobile-link">Pengalaman</a>
   <a href="#contact" class="mobile-link">Kontak</a>
+  <a href="https://www.linkedin.com/in/uikhsanf/" target="_blank" style="color:#93c5fd;">
+    <i data-lucide="linkedin"></i> Profil LinkedIn
+  </a>
   <a href="assets/CV_Urai_Ikhsan_Fadhilah_Final.docx" style="color:var(--accent-gold-light);">
-    <i data-lucide="download"></i> Download CV Formal
+    <i data-lucide="download"></i> Download CV (Word)
   </a>
 </div>
 
@@ -649,7 +667,7 @@ footer {
     </div>
   </section>
 
-  <!-- IMPACT STATS METRICS BAR WITH ANIMATED COUNTER -->
+  <!-- IMPACT STATS METRICS BAR -->
   <div class="stats-bar">
     <div class="wrap stats-grid">
       <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
@@ -940,6 +958,10 @@ footer {
         <div class="contact-item">
           <i data-lucide="map-pin"></i>
           <span>Pontianak, Kalimantan Barat, Indonesia</span>
+        </div>
+        <div class="contact-item">
+          <i data-lucide="linkedin"></i>
+          <a href="https://www.linkedin.com/in/uikhsanf/" target="_blank">LinkedIn — Urai Ikhsan Fadhilah</a>
         </div>
         <div class="contact-item">
           <i data-lucide="instagram"></i>
