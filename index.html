@@ -5,13 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Urai Ikhsan Fadhilah">
-<meta name="description" content="Portofolio eksekutif Urai Ikhsan Fadhilah — Admin Branch Manager & Digital Solution Specialist dengan pengalaman 16+ tahun di operasional cabang, analisis data sales, dan inovasi web app.">
-<meta property="og:image" content="assets/foto-abah.jpg">
-<meta name="twitter:image" content="assets/foto-abah.jpg">
-<title>Urai Ikhsan Fadhilah | Executive Portfolio & Digital Solution Specialist</title>
+<meta name="description" content="Portofolio eksekutif Urai Ikhsan Fadhilah — Operations, Administration & Business Support Professional dengan pengalaman 16+ tahun di operasional cabang, analisis data sales, dan inovasi web app.">
+<link rel="canonical" href="https://ikhsanfadhilah.my.id/">
+
+<!-- SEO OPEN GRAPH (PRATINJAU LINK WHATSAPP & LINKEDIN) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ikhsanfadhilah.my.id/">
+<meta property="og:title" content="Urai Ikhsan Fadhilah | Operations, Administration & Business Support Professional">
+<meta property="og:description" content="Admin Branch Manager & Digital Solution Specialist dengan pengalaman 16+ tahun di FMCG, Finance, & Alat Berat. Spesialisasi efisiensi operasional, analisis data sales, dan otomatisasi workflow.">
+<meta property="og:image" content="https://ikhsanfadhilah.my.id/assets/foto-abah.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Urai Ikhsan Fadhilah Portfolio">
+
+<!-- TWITTER CARDS -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://ikhsanfadhilah.my.id/">
+<meta name="twitter:title" content="Urai Ikhsan Fadhilah | Executive Portfolio">
+<meta name="twitter:description" content="Operations, Administration & Business Support Professional — 16+ Tahun Pengalaman Operasional & Digital Solusi.">
+<meta name="twitter:image" content="https://ikhsanfadhilah.my.id/assets/foto-abah.jpg">
+
+<title>Urai Ikhsan Fadhilah | Operations, Administration & Business Support Professional</title>
 
 <!-- FAVICON SVG MONOGRAM (EMAS EKSEKUTIF) -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23080e1a'/><circle cx='50' cy='50' r='44' fill='none' stroke='%23c7a35b' stroke-width='4'/><text x='50%' y='62%' font-family='Georgia, serif' font-size='48' font-weight='bold' fill='%23fbbf24' text-anchor='middle'>U</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230A192F'/><circle cx='50' cy='50' r='44' fill='none' stroke='%23D4AF37' stroke-width='4'/><text x='50%' y='62%' font-family='Georgia, serif' font-size='48' font-weight='bold' fill='%23E2B93B' text-anchor='middle'>U</text></svg>">
 
 <!-- GOOGLE FONTS, LUCIDE ICONS, & AOS ANIMATION CDN -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,17 +39,18 @@
 
 <style>
 :root {
-  --bg-main: #080e1a;
-  --bg-card: #111a2e;
-  --bg-card-hover: #18243f;
-  --accent-gold: #c7a35b;
-  --accent-gold-light: #fbbf24;
-  --accent-blue: #2563eb;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --border: #1e293b;
-  --border-gold: rgba(199, 163, 91, 0.3);
-  --shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  --bg-main: #0A192F;
+  --bg-card: #112240;
+  --bg-card-hover: #1D2D50;
+  --accent-gold: #D4AF37;
+  --accent-gold-light: #E2B93B;
+  --accent-blue: #38BDF8;
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --border: #1E293B;
+  --border-gold: rgba(212, 175, 55, 0.35);
+  --gold-glow: rgba(212, 175, 55, 0.25);
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -55,9 +73,9 @@ a { text-decoration: none; color: inherit; }
   left: 0;
   right: 0;
   z-index: 50;
-  background: rgba(8, 14, 26, 0.9);
+  background: rgba(10, 25, 47, 0.9);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
   transition: all 0.3s ease;
 }
 nav {
@@ -82,7 +100,7 @@ nav {
   align-items: center;
 }
 .navlinks a { transition: color 0.25s ease; }
-.navlinks a:hover { color: #fff; }
+.navlinks a:hover { color: var(--accent-gold-light); }
 
 .cta-group {
   display: flex;
@@ -92,7 +110,7 @@ nav {
 
 .navcta {
   border: 1px solid var(--border-gold);
-  background: rgba(199, 163, 91, 0.08);
+  background: rgba(212, 175, 55, 0.08);
   padding: 8px 16px;
   border-radius: 999px;
   color: var(--accent-gold-light);
@@ -101,12 +119,13 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 .navcta:hover {
   background: var(--accent-gold);
-  color: #080e1a;
-  box-shadow: 0 0 20px rgba(199, 163, 91, 0.4);
+  color: #0A192F;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
   transform: translateY(-2px);
 }
 
@@ -114,7 +133,7 @@ nav {
 .hero {
   padding-top: 130px;
   padding-bottom: 80px;
-  background: radial-gradient(circle at 75% 20%, #172544 0%, #080e1a 60%);
+  background: radial-gradient(circle at 75% 20%, #172a4d 0%, #0A192F 60%);
   position: relative;
   border-bottom: 1px solid var(--border);
 }
@@ -144,16 +163,16 @@ nav {
 h1 {
   font-family: Georgia, serif;
   font-weight: 500;
-  font-size: clamp(44px, 5.5vw, 76px);
-  line-height: 1.05;
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 1.08;
   margin-bottom: 22px;
   color: #fff;
 }
-h1 span { color: #60a5fa; }
+h1 span { color: var(--accent-blue); }
 .hero-subtitle {
   color: var(--text-muted);
-  font-size: 16.5px;
-  max-width: 580px;
+  font-size: 16px;
+  max-width: 600px;
   margin-bottom: 32px;
   line-height: 1.7;
 }
@@ -172,48 +191,72 @@ h1 span { color: #60a5fa; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 .btn svg { width: 16px; height: 16px; }
-.btn-primary { background: var(--text-main); color: #080e1a; }
+.btn-primary { background: var(--text-main); color: #0A192F; }
 .btn-primary:hover {
   background: var(--accent-gold-light);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
+  box-shadow: 0 10px 25px rgba(226, 185, 59, 0.3);
 }
 .btn-outline {
   border: 1px solid var(--border-gold);
   color: var(--accent-gold-light);
-  background: rgba(199, 163, 91, 0.05);
+  background: rgba(212, 175, 55, 0.05);
 }
 .btn-outline:hover {
   border-color: var(--accent-gold-light);
   background: var(--accent-gold);
-  color: #080e1a;
+  color: #0A192F;
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(199, 163, 91, 0.3);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
 }
 
 .hero-photo-wrapper {
   position: relative;
   text-align: center;
 }
+.hero-photo-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+  z-index: 0;
+  filter: blur(40px);
+  animation: pulseGlow 4s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.6; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+}
+
 .hero-photo {
+  position: relative;
+  z-index: 1;
   width: min(380px, 100%);
   height: min(440px, 100%);
   border-radius: 24px;
   object-fit: cover;
   object-position: center top;
   border: 2px solid var(--border-gold);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow), 0 0 30px var(--gold-glow);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 .hero-photo:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 35px var(--border-gold);
+  box-shadow: 0 0 45px var(--accent-gold);
 }
 
 .location-badge {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -295,13 +338,14 @@ h1 span { color: #60a5fa; }
 }
 .about-box:hover { border-color: var(--border-gold); }
 
-/* FLAGSHIP SHOWCASE SECTION */
-.flagship-grid {
+/* FLAGSHIP SHOWCASE SECTION & CORE COMPETENCIES (INTERACTIVE CARDS) */
+.flagship-grid, .expert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
-.app-card {
+
+.app-card, .expert-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 18px;
@@ -309,34 +353,58 @@ h1 span { color: #60a5fa; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.app-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--border-gold);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(199, 163, 91, 0.15);
+
+.app-card::before, .expert-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+  transition: left 0.6s ease;
 }
+
+.app-card:hover::before, .expert-card:hover::before {
+  left: 100%;
+}
+
+.app-card:hover, .expert-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: var(--accent-gold);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
 .app-icon-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 18px;
 }
-.app-icon {
+.app-icon, .expert-icon {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(199, 163, 91, 0.1);
+  background: rgba(212, 175, 55, 0.1);
   border: 1px solid var(--border-gold);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--accent-gold-light);
-  transition: transform 0.3s ease;
+  margin-bottom: 14px;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
-.app-card:hover .app-icon {
-  transform: scale(1.1) rotate(5deg);
+
+.app-card:hover .app-icon, .expert-card:hover .expert-icon {
+  transform: scale(1.15) rotate(8deg);
+  background: var(--accent-gold);
+  color: #0A192F;
 }
+
 .app-tag {
   font-size: 10.5px;
   font-weight: 800;
@@ -344,30 +412,31 @@ h1 span { color: #60a5fa; }
   letter-spacing: 0.08em;
   padding: 4px 10px;
   border-radius: 6px;
-  background: rgba(37, 99, 235, 0.15);
-  color: #93c5fd;
-  border: 1px solid rgba(37, 99, 235, 0.3);
+  background: rgba(56, 189, 248, 0.12);
+  color: #38BDF8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
 }
-.app-title {
+
+.app-title, .expert-card h3 {
   font-size: 19px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 8px;
 }
-.app-desc {
+.app-desc, .expert-card p {
   font-size: 13.5px;
   color: var(--text-muted);
-  margin-bottom: 20px;
+  line-height: 1.6;
 }
 .impact-box {
-  background: rgba(199, 163, 91, 0.08);
+  background: rgba(212, 175, 55, 0.08);
   border-left: 3px solid var(--accent-gold);
   padding: 10px 14px;
   border-radius: 0 8px 8px 0;
   font-size: 12px;
-  color: #fef08a;
+  color: var(--accent-gold-light);
   font-weight: 600;
-  margin-bottom: 18px;
+  margin-top: 18px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -376,7 +445,7 @@ h1 span { color: #60a5fa; }
 /* OTHER APPS BANNER */
 .more-apps-banner {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, rgba(17, 26, 46, 0.9) 0%, rgba(24, 36, 63, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(17, 34, 64, 0.9) 0%, rgba(29, 45, 80, 0.9) 100%);
   border: 1px dashed var(--border-gold);
   border-radius: 18px;
   padding: 32px;
@@ -419,34 +488,7 @@ h1 span { color: #60a5fa; }
   transform: translateY(-2px);
 }
 
-/* CORE COMPETENCIES */
-.expert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-.expert-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  padding: 26px;
-  border-radius: 16px;
-  transition: all 0.3s ease;
-}
-.expert-card:hover {
-  border-color: var(--border-gold);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-.expert-icon {
-  color: var(--accent-gold);
-  margin-bottom: 14px;
-  transition: transform 0.3s ease;
-}
-.expert-card:hover .expert-icon { transform: scale(1.15); }
-.expert-card h3 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; }
-.expert-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
-
-/* CAREER TIMELINE */
+/* CAREER TIMELINE WITH ACTIVE SIGNAL PULSE */
 .timeline {
   position: relative;
   padding-top: 20px;
@@ -485,6 +527,24 @@ h1 span { color: #60a5fa; }
   z-index: 3;
   transition: transform 0.3s ease;
 }
+
+.job-item.active .dot::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-gold-light);
+  animation: rippleSignal 1.8s infinite;
+}
+
+@keyframes rippleSignal {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
 .job-item:hover .dot {
   transform: scale(1.4);
   background: var(--accent-gold-light);
@@ -499,6 +559,21 @@ h1 span { color: #60a5fa; }
 }
 .job-item h3 { font-family: Georgia, serif; font-size: 22px; color: #fff; margin-bottom: 4px; }
 .job-item p { font-size: 13px; color: var(--text-muted); }
+
+/* EDUCATION BOX */
+.edu-box {
+  margin-top: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.edu-info h4 { font-size: 18px; color: #fff; margin-bottom: 4px; }
+.edu-info p { font-size: 13.5px; color: var(--text-muted); }
 
 /* KORPORATPEDIA FEATURE */
 .korporat-card {
@@ -526,7 +601,7 @@ h1 span { color: #60a5fa; }
 
 /* FOOTER & CONTACT */
 footer {
-  background: #04070e;
+  background: #060D1A;
   border-top: 1px solid var(--border);
   padding: 80px 0 30px;
 }
@@ -566,6 +641,132 @@ footer {
   justify-content: space-between;
 }
 
+/* SMART WHATSAPP INQUIRY MODAL STYLES */
+.wa-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(4, 8, 16, 0.82);
+  backdrop-filter: blur(12px);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+.wa-modal-overlay.active { display: flex; }
+
+.wa-modal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 24px;
+  width: min(540px, 100%);
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 30px var(--gold-glow);
+  animation: slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wa-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.wa-modal-close:hover {
+  background: var(--accent-gold);
+  color: #0A192F;
+  border-color: var(--accent-gold);
+}
+
+.wa-modal-header {
+  margin-bottom: 24px;
+}
+.wa-modal-header h3 {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  color: #fff;
+  margin-top: 6px;
+}
+.wa-modal-header p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+.wa-options-list {
+  display: grid;
+  gap: 12px;
+}
+
+.wa-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.wa-option-btn:hover {
+  border-color: var(--accent-gold);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.wa-option-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold-light);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+.wa-option-btn:hover .wa-option-icon {
+  background: var(--accent-gold);
+  color: #0A192F;
+  transform: scale(1.1);
+}
+
+.wa-option-text h4 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #fff;
+}
+.wa-option-text p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
 /* RESPONSIVE LAYOUT */
 .mobile-menu { display: none; cursor: pointer; }
 .mobile-nav-overlay {
@@ -590,6 +791,7 @@ footer {
   .timeline-grid { grid-template-columns: 1fr; gap: 28px; }
   .job-item { padding-top: 0; padding-left: 24px; border-left: 2px solid var(--border); }
   .job-item .dot { left: -8px; top: 2px; }
+  .edu-box { flex-direction: column; align-items: flex-start; }
   .copyright { flex-direction: column; gap: 8px; }
   .cta-group { flex-direction: column; width: 100%; }
 }
@@ -613,8 +815,8 @@ footer {
         <a class="navcta" href="https://www.linkedin.com/in/uikhsanf/" target="_blank">
           <i data-lucide="linkedin"></i> LinkedIn
         </a>
-        <a class="navcta" href="assets/CV_Urai_Ikhsan_Fadhilah_Final.docx">
-          <i data-lucide="download"></i> CV (Word)
+        <a class="navcta" href="assets/CV_URAI_IKHSAN_FADHILAH.docx" download>
+          <i data-lucide="download"></i> Download CV
         </a>
       </div>
       <div class="mobile-menu" id="mobileMenuBtn">☰</div>
@@ -629,11 +831,14 @@ footer {
   <a href="#expertise" class="mobile-link">Kompetensi</a>
   <a href="#experience" class="mobile-link">Pengalaman</a>
   <a href="#contact" class="mobile-link">Kontak</a>
-  <a href="https://www.linkedin.com/in/uikhsanf/" target="_blank" style="color:#93c5fd;">
+  <a href="https://www.linkedin.com/in/uikhsanf/" target="_blank" style="color:#38BDF8;">
     <i data-lucide="linkedin"></i> Profil LinkedIn
   </a>
-  <a href="assets/CV_Urai_Ikhsan_Fadhilah_Final.docx" style="color:var(--accent-gold-light);">
-    <i data-lucide="download"></i> Download CV (Word)
+  <a href="javascript:void(0)" onclick="openWaModal()" style="color:#22c55e;">
+    <i data-lucide="message-circle"></i> Hubungi via WhatsApp
+  </a>
+  <a href="assets/CV_URAI_IKHSAN_FADHILAH.docx" download style="color:var(--accent-gold-light);">
+    <i data-lucide="download"></i> Download CV (DOCX)
   </a>
 </div>
 
@@ -645,14 +850,14 @@ footer {
         <div class="eyebrow">Executive Portfolio</div>
         <h1>Urai Ikhsan<br><span>Fadhilah</span></h1>
         <p class="hero-subtitle">
-          Admin Branch Manager & Digital Solution Specialist dengan pengalaman 16+ tahun di industri FMCG, Finance, dan Alat Berat. Menggabungkan eksekusi operasional dengan otomatisasi sistem berbasis web.
+          Operations, Administration & Business Support Professional dengan pengalaman 16+ tahun di industri FMCG, Finance, dan Alat Berat. Berfokus pada efisiensi operasional, analisis data sales, dan digitalisasi alur kerja.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#flagship">
-            <i data-lucide="layout-grid"></i> Lihat Aplikasi Unggulan
-          </a>
-          <a class="btn btn-outline" href="https://wa.me/6282254127596?text=Halo%20Pak%20Urai%20Ikhsan,%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi%20mengenai%20peluang%20karir%20/%20kolaborasi." target="_blank">
+          <button class="btn btn-primary" onclick="openWaModal()">
             <i data-lucide="message-circle"></i> Hubungi via WhatsApp
+          </button>
+          <a class="btn btn-outline" href="assets/CV_URAI_IKHSAN_FADHILAH.docx" download>
+            <i data-lucide="file-text"></i> Unduh CV Resmi
           </a>
         </div>
       </div>
@@ -694,26 +899,26 @@ footer {
     <div class="wrap">
       <div class="section-head" data-aos="fade-up">
         <div>
-          <div class="kicker">01 — Profil Eksekutif</div>
-          <h2>Pengalaman Lapangan.<br>Solusi Digital Mandiri.</h2>
+          <div class="kicker">01 — Ringkasan Profil</div>
+          <h2>Eksekusi Operasional.<br>Otomatisasi Berbasis Data.</h2>
         </div>
       </div>
       <div class="about-box" data-aos="fade-up" data-aos-delay="150">
         <p>
-          Profesional Operasional & Administrasi Cabang dengan pengalaman 16+ tahun di industri FMCG, alat berat, dan pembiayaan. Memiliki spesialisasi dalam tata kelola cabang, analisis data penjualan, monitoring KPI, serta efisiensi alur kerja lintas fungsi.
+          Profesional Operasional, Administrasi & Business Support dengan pengalaman lebih dari 16 tahun di industri FMCG, dealer alat berat, dan perusahaan pembiayaan. Berpengalaman dalam pengelolaan administrasi dan operasional cabang, analisis performa penjualan, pengendalian biaya (cost control), monitoring KPI, serta koordinasi lintas fungsi.
         </p>
         <p>
-          Berfokus pada perbaikan proses bisnis melalui otomatisasi digital dan pengembangan dashboard monitoring interaktif. Di luar aktivitas korporasi, aktif merancang proyek aplikasi web independen serta membangun <strong>@korporatpedia</strong> sebagai media edukasi produktivitas dan operasional dunia kerja.
+          Memiliki kemampuan mendalam dalam mengembangkan dan menyederhanakan proses kerja melalui digitalisasi, otomatisasi administrasi, serta pemanfaatan data untuk membantu meningkatkan efisiensi dan mendukung pengambilan keputusan manajemen.
         </p>
         <p>
-          Memadukan pengalaman lapangan, analisis data, dan inovasi teknologi untuk menciptakan proses kerja yang presisi, efektif, serta berdampak nyata bagi pertumbuhan organisasi.
+          Di luar aktivitas korporasi, aktif merancang proyek aplikasi web independen serta membangun <strong>@korporatpedia</strong> sebagai platform edukasi digital yang membahas produktivitas dunia kerja, operasional, dan analisis performa.
         </p>
       </div>
     </div>
   </section>
 
   <!-- FLAGSHIP SHOWCASE SECTION -->
-  <section id="flagship" class="section" style="background: rgba(17, 26, 46, 0.4); border-y: 1px solid var(--border);">
+  <section id="flagship" class="section" style="background: rgba(17, 34, 64, 0.4); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
     <div class="wrap">
       <div class="section-head" data-aos="fade-up">
         <div>
@@ -721,7 +926,7 @@ footer {
           <h2>Flagship Web Applications</h2>
         </div>
         <p class="section-intro">
-          Lima sistem aplikasi web kustom utama yang dirancang khusus untuk efisiensi operasional, pengawasan armada, serta efisiensi anggaran.
+          Enam sistem aplikasi web kustom utama yang dirancang khusus untuk efisiensi operasional, pengawasan armada, efisiensi anggaran, hingga administrasi pendidikan.
         </p>
       </div>
 
@@ -786,7 +991,7 @@ footer {
               <span class="app-tag">Commercial</span>
             </div>
             <div class="app-title">CRM & Sales Pipeline System</div>
-            <p class="app-desc">Platform pengelolaan data pelanggan, pencatatan riwayat interaksi, serta pelacakan performa prospek penjualan tim comercial cabang.</p>
+            <p class="app-desc">Platform pengelolaan data pelanggan, pencatatan riwayat interaksi, serta pelacakan performa prospek penjualan tim commercial cabang.</p>
           </div>
           <div>
             <div class="impact-box">
@@ -812,6 +1017,23 @@ footer {
           </div>
         </div>
 
+        <!-- APP 6 -->
+        <div class="app-card" data-aos="fade-up" data-aos-delay="600">
+          <div>
+            <div class="app-icon-header">
+              <div class="app-icon"><i data-lucide="graduation-cap"></i></div>
+              <span class="app-tag" style="background: rgba(168, 85, 247, 0.12); color: #C084FC; border-color: rgba(168, 85, 247, 0.3);">EdTech Solution</span>
+            </div>
+            <div class="app-title">EDUKIND — Smart School System</div>
+            <p class="app-desc">Platform terpadu untuk efisiensi administrasi sekolah, digitalisasi lembar induk siswa, pelaporan perkembangan belajar, serta integrasi data pendidikan.</p>
+          </div>
+          <div>
+            <div class="impact-box">
+              <i data-lucide="zap"></i> Otomatisasi tata kelola data siswa & administrasi
+            </div>
+          </div>
+        </div>
+
         <!-- SPECIAL BANNER FOR OTHER APPS -->
         <div class="more-apps-banner" data-aos="zoom-in" data-aos-delay="200">
           <div class="more-apps-title">
@@ -819,7 +1041,7 @@ footer {
             +10 Aplikasi Web Kustom Lainnya
           </div>
           <p class="more-apps-desc">
-            Selain lima aplikasi utama di atas, telah dikembangkan pula berbagai solusi digital spesifik untuk efisiensi operasional bisnis, tata kelola kas, serta integrasi data:
+            Selain enam aplikasi utama di atas, telah dikembangkan pula berbagai solusi digital spesifik untuk efisiensi operasional bisnis, tata kelola kas, serta integrasi data:
           </p>
           <div class="badge-cloud">
             <span class="mini-badge">Aplikasi Kas Dana Duka</span>
@@ -836,7 +1058,7 @@ footer {
     </div>
   </section>
 
-  <!-- CORE COMPETENCIES -->
+  <!-- CORE COMPETENCIES (6 PILAR UTAMA - SIMETRIS 3x2) -->
   <section id="expertise" class="section">
     <div class="wrap">
       <div class="section-head" data-aos="fade-up">
@@ -845,50 +1067,55 @@ footer {
           <h2>Core Competencies</h2>
         </div>
         <p class="section-intro">
-          Perpaduan kepemimpinan operasional cabang, kapabilitas analisis data, dan inovasi otomatisasi berbasis web.
+          Enam pilar utama yang menggabungkan kepemimpinan operasional cabang, analisis data, dan otomatisasi digital.
         </p>
       </div>
       <div class="expert-grid">
         <div class="expert-card" data-aos="fade-up" data-aos-delay="100">
           <div class="expert-icon"><i data-lucide="briefcase"></i></div>
-          <h3>Manajemen Cabang & Operasional</h3>
-          <p>Tata kelola operasional cabang, supervisi tim administrasi, verifikasi klaim dokumen, audit kepatuhan, dan pengawasan aset perusahaan.</p>
+          <h3>Operasional & Administrasi Cabang</h3>
+          <p>Pengelolaan tata kelola administrasi cabang, cost control, monitoring operasional, audit kepatuhan, serta pengelolaan anggaran secara efisien.</p>
         </div>
+        
         <div class="expert-card" data-aos="fade-up" data-aos-delay="200">
           <div class="expert-icon"><i data-lucide="bar-chart-3"></i></div>
-          <h3>Analisis Data Sales & Power BI</h3>
-          <p>Pengolahan data performa penjualan harian/bulanan, penyusunan dashboard visual (Power BI & Advanced Excel), serta pemantauan pencapaian KPI.</p>
+          <h3>Analisis & Pelaporan Sales</h3>
+          <p>Sales performance analysis, monitoring pencapaian KPI sales cabang, pengolahan data penjualan harian/bulanan, dan penyusunan laporan evaluasi.</p>
         </div>
+
         <div class="expert-card" data-aos="fade-up" data-aos-delay="300">
           <div class="expert-icon"><i data-lucide="cpu"></i></div>
-          <h3>Inovasi Digital & AI Solutions</h3>
-          <p>Merancang dan mengimplementasikan aplikasi web kustom (AI-Assisted Dev) untuk mengotomatisasi alur kerja manual yang kompleks.</p>
+          <h3>Digital & Teknologi Solusi</h3>
+          <p>Pengembangan dashboard monitoring interaktif, digitalisasi proses kerja, dan otomatisasi workflow untuk memotong waktu pekerjaan manual.</p>
         </div>
+
         <div class="expert-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="expert-icon"><i data-lucide="shield-check"></i></div>
-          <h3>Pengawasan Biaya & Fleet Ops</h3>
-          <p>Pengendalian biaya operasional armada (audit BBM), pengawasan efisiensi kas sosial/kasir, serta penyajian laporan finansial yang transparan.</p>
+          <div class="expert-icon"><i data-lucide="git-pull-request"></i></div>
+          <h3>Koordinasi & Perbaikan Proses</h3>
+          <p>Kolaborasi lintas fungsi departemen, problem solving operasional, penyederhanaan alur kerja, dan perbaikan berlanjut (process improvement).</p>
         </div>
+
         <div class="expert-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="expert-icon"><i data-lucide="users"></i></div>
-          <h3>Kepemimpinan & Supervisi Tim</h3>
-          <p>Mendorong efisiensi kerja tim pendukung operasional, pembinaan kedisiplinan kerja, serta koordinasi efektif lintas fungsi departemen.</p>
+          <div class="expert-icon"><i data-lucide="shield-check"></i></div>
+          <h3>Pengendalian Biaya & Fleet Ops</h3>
+          <p>Supervisi efisiensi biaya kendaraan operasional cabang, audit konsumsi BBM real-time, serta pengetatan transparansi kas/keuangan.</p>
         </div>
+
         <div class="expert-card" data-aos="fade-up" data-aos-delay="600">
-          <div class="expert-icon"><i data-lucide="file-check"></i></div>
-          <h3>Korespondensi & Tata Kelola Bisnis</h3>
-          <p>Penyusunan dokumen resmi korporat, korespondensi bisnis, penyusunan SOP administrasi, serta verifikasi kelengkapan berkas audit.</p>
+          <div class="expert-icon"><i data-lucide="users"></i></div>
+          <h3>Kepemimpinan & Edukasi Publik</h3>
+          <p>Supervisi tim pendukung operasional, pembinaan kedisiplinan kerja, serta edukasi produktivitas dunia kerja lewat media @korporatpedia.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CAREER TIMELINE -->
-  <section id="experience" class="section" style="background: rgba(17, 26, 46, 0.4);">
+  <section id="experience" class="section" style="background: rgba(17, 34, 64, 0.4);">
     <div class="wrap">
       <div class="section-head" data-aos="fade-up">
         <div>
-          <div class="kicker">04 — Perjalanan Karier</div>
+          <div class="kicker">04 — Rekam Pengalaman</div>
           <h2>Professional Journey</h2>
         </div>
       </div>
@@ -903,16 +1130,28 @@ footer {
           <div class="job-item" data-aos="fade-up" data-aos-delay="200">
             <span class="dot"></span>
             <span class="job-year">2014 — 2015</span>
-            <h3>Part Counter - Analyst</h3>
+            <h3>Part Counter Analyst</h3>
             <p>Dealer Alat Berat</p>
           </div>
-          <div class="job-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="job-item active" data-aos="fade-up" data-aos-delay="300">
             <span class="dot"></span>
             <span class="job-year">2015 — SEKARANG</span>
             <h3>Admin Branch Manager</h3>
             <p>FMCG (Fast Moving Consumer Goods)</p>
           </div>
         </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="edu-box" data-aos="fade-up" data-aos-delay="200">
+        <div class="edu-info">
+          <div class="kicker" style="margin-bottom: 6px;">Latar Belakang Pendidikan</div>
+          <h4>D3 Manajemen Informatika</h4>
+          <p>Universitas Bina Sarana Informatika (UBSI) — Pontianak, Kalimantan Barat</p>
+        </div>
+        <a href="assets/CV_URAI_IKHSAN_FADHILAH.docx" download class="btn btn-outline" style="font-size: 11px;">
+          <i data-lucide="download"></i> Download CV Resmi
+        </a>
       </div>
     </div>
   </section>
@@ -947,8 +1186,8 @@ footer {
       <div class="contact-list" data-aos="fade-left">
         <div class="contact-item">
           <i data-lucide="message-circle"></i>
-          <a href="https://wa.me/6282254127596?text=Halo%20Pak%20Urai%20Ikhsan,%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi%20mengenai%20peluang%20karir%20/%20kolaborasi." target="_blank">
-            WhatsApp — 0822 5412 7596 (Direct Chat)
+          <a href="javascript:void(0)" onclick="openWaModal()">
+            WhatsApp — 0822 54125 7596 (Pilih Topik Diskusi)
           </a>
         </div>
         <div class="contact-item">
@@ -973,7 +1212,7 @@ footer {
         </div>
         <div class="contact-item">
           <i data-lucide="file-text"></i>
-          <a href="assets/CV_Urai_Ikhsan_Fadhilah_Final.docx">Download CV Formal (Word)</a>
+          <a href="assets/CV_URAI_IKHSAN_FADHILAH.docx" download>Unduh CV Resmi (DOCX)</a>
         </div>
       </div>
     </div>
@@ -983,6 +1222,55 @@ footer {
     </div>
   </div>
 </footer>
+
+<!-- SMART WHATSAPP INQUIRY MODAL -->
+<div class="wa-modal-overlay" id="waModalOverlay">
+  <div class="wa-modal-card">
+    <button class="wa-modal-close" onclick="closeWaModal()">✕</button>
+    <div class="wa-modal-header">
+      <div class="kicker">Direct Executive Contact</div>
+      <h3>Pilih Topik Diskusi</h3>
+      <p>Silakan pilih tujuan komunikasi Anda untuk langsung tersambung ke WhatsApp pribadi Urai Ikhsan Fadhilah.</p>
+    </div>
+    <div class="wa-options-list">
+      <!-- OPSI 1 -->
+      <a href="https://wa.me/62822541257596?text=Halo%20Pak%20Urai%20Ikhsan,%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20berdiskusi%20mengenai%20peluang%20karir%20/%20kepemimpinan%20operasional." target="_blank" class="wa-option-btn">
+        <div class="wa-option-icon"><i data-lucide="briefcase"></i></div>
+        <div class="wa-option-text">
+          <h4>Peluang Karir & Kepemimpinan Operasional</h4>
+          <p>Diskusi mengenai posisi manajerial cabang, operasional, & ekspansi.</p>
+        </div>
+      </a>
+      
+      <!-- OPSI 2 -->
+      <a href="https://wa.me/62822541257596?text=Halo%20Pak%20Urai%20Ikhsan,%20saya%20tertarik%20berkonsultasi%20mengenai%20digitalisasi%20proses%20bisnis%20dan%20otomatisasi%20workflow." target="_blank" class="wa-option-btn">
+        <div class="wa-option-icon"><i data-lucide="cpu"></i></div>
+        <div class="wa-option-text">
+          <h4>Digitalisasi & Automated Workflow</h4>
+          <p>Konsultasi sistem kustom, otomatisasi data sales, & dashboard KPI.</p>
+        </div>
+      </a>
+
+      <!-- OPSI 3 -->
+      <a href="https://wa.me/62822541257596?text=Halo%20Pak%20Urai%20Ikhsan,%20saya%20tertarik%20berkolaborasi%20dengan%20platform%20@korporatpedia." target="_blank" class="wa-option-btn">
+        <div class="wa-option-icon"><i data-lucide="graduation-cap"></i></div>
+        <div class="wa-option-text">
+          <h4>Kolaborasi Media Edukasi (@korporatpedia)</h4>
+          <p>Kerjasama konten produktivitas kerja, edukasi sales, & media mitra.</p>
+        </div>
+      </a>
+
+      <!-- OPSI 4 -->
+      <a href="https://wa.me/62822541257596?text=Halo%20Pak%20Urai%20Ikhsan,%20saya%20melihat%20portofolio%20Anda%20dan%20ingin%20terhubung%20untuk%20jejaring%20profesional." target="_blank" class="wa-option-btn">
+        <div class="wa-option-icon"><i data-lucide="message-square"></i></div>
+        <div class="wa-option-text">
+          <h4>Diskusi Umum & Jejaring Profesional</h4>
+          <p>Terhubung untuk percakapan santai, diskusi industri, atau jejaring.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
 
 <!-- SCRIPT AOS ANIMATION & INTERACTION -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -1046,6 +1334,33 @@ footer {
       mobileOverlay.classList.remove('open');
       mobileBtn.textContent = '☰';
     });
+  });
+
+  // SMART WHATSAPP INQUIRY MODAL FUNCTIONS
+  const waModalOverlay = document.getElementById('waModalOverlay');
+
+  function openWaModal() {
+    waModalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeWaModal() {
+    waModalOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close modal when clicking outside of card
+  waModalOverlay.addEventListener('click', (e) => {
+    if (e.target === waModalOverlay) {
+      closeWaModal();
+    }
+  });
+
+  // Close modal on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && waModalOverlay.classList.contains('active')) {
+      closeWaModal();
+    }
   });
 </script>
 </body>
