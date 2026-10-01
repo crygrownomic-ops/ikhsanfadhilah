@@ -70,7 +70,6 @@
   --bg-card-hover: #152038;
   --accent-blue: #1E68F6;
   --accent-sky: #38BDF8;
-  --accent-light-blue: #60A5FA;
   --text-main: #F8FAFC;
   --text-muted: #94A3B8;
   --border: rgba(255, 255, 255, 0.08);
@@ -92,7 +91,7 @@ body {
 
 a { text-decoration: none; color: inherit; }
 button, input, select, textarea { font-family: inherit; }
-.wrap { width: min(1240px, 92%); margin: auto; }
+.wrap { width: min(1280px, 94%); margin: auto; }
 
 /* TOPBAR NAVIGATION */
 .topbar {
@@ -101,7 +100,7 @@ button, input, select, textarea { font-family: inherit; }
   left: 0;
   right: 0;
   z-index: 50;
-  background: rgba(6, 10, 18, 0.92);
+  background: rgba(6, 10, 18, 0.94);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(56, 189, 248, 0.15);
   transition: all 0.3s ease;
@@ -111,14 +110,15 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
-/* LOGO BORDER & GLOW PUTIH */
 .brand-logo-box {
   width: 44px; height: 44px;
   background: transparent;
@@ -128,6 +128,7 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 .brand-logo-box:hover {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
@@ -140,36 +141,39 @@ nav {
   transform: scale(1.1);
 }
 
-.brand-text-title { font-size: 17px; font-weight: 800; color: #FFF; letter-spacing: 0.5px; }
+.brand-text-title { font-size: 16px; font-weight: 800; color: #FFF; letter-spacing: 0.3px; white-space: nowrap; }
 .brand-text-title span { color: var(--accent-sky); }
-.brand-sub { font-size: 10.5px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; }
+.brand-sub { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; white-space: nowrap; }
 
+/* OPTIMASI GAP NAVLINKS AGAR TIDAK OVERLAP */
 .navlinks {
   display: flex;
-  gap: 22px;
+  gap: 14px;
   color: var(--text-muted);
-  font-size: 13.5px;
+  font-size: 12.5px;
   font-weight: 600;
   align-items: center;
+  white-space: nowrap;
 }
 .navlinks a { transition: color 0.25s ease; }
 .navlinks a:hover { color: var(--accent-sky); }
 
-.cta-group { display: flex; gap: 10px; align-items: center; }
+.cta-group { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
 
 .navcta {
   border: 1px solid var(--border-blue);
   background: rgba(56, 189, 248, 0.08);
-  padding: 8px 16px;
+  padding: 8px 14px;
   border-radius: 999px;
   color: var(--accent-sky);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 .navcta:hover {
   background: var(--accent-sky);
@@ -179,9 +183,9 @@ nav {
 }
 
 .btn-cta {
-  background: var(--accent-blue); color: #FFF !important; font-weight: 700; font-size: 13px;
-  padding: 10px 20px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer;
-  transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--accent-blue); color: #FFF !important; font-weight: 700; font-size: 12.5px;
+  padding: 9px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); cursor: pointer;
+  transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap;
 }
 .btn-cta:hover { background: #1653CC; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(30, 104, 246, 0.3); }
 
@@ -290,8 +294,6 @@ h1 span { color: var(--accent-sky); }
   position: relative;
   text-align: center;
 }
-
-/* FOTO MENYATU TANPA BORDER EMAS */
 .hero-photo-wrapper::before {
   content: '';
   position: absolute;
@@ -1005,7 +1007,7 @@ footer {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* RESPONSIVE LAYOUT */
+/* RESPONSIVE LAYOUT (PADA LAYAR < 1120PX OTOMATIS BERGANTI KE MOBILE MENU UNTUK MENCEGAH TUMPANG TINDIH) */
 .mobile-menu { display: none; cursor: pointer; }
 .mobile-nav-overlay {
   display: none;
@@ -1020,7 +1022,7 @@ footer {
 .mobile-nav-overlay.open { display: flex; }
 .mobile-nav-overlay a { font-size: 18px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
 
-@media (max-width: 868px) {
+@media (max-width: 1120px) {
   .navlinks { display: none; }
   .mobile-menu { display: block; color: #fff; font-size: 24px; }
   .hero-grid, .korporat-card, .footer-grid { grid-template-columns: 1fr; }
@@ -1031,7 +1033,7 @@ footer {
   .job-item .dot { left: -8px; top: 2px; }
   .edu-box { flex-direction: column; align-items: flex-start; }
   .copyright { flex-direction: column; gap: 8px; }
-  .cta-group { flex-direction: column; width: 100%; }
+  .cta-group { flex-direction: row; }
   .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
 }
 </style>
@@ -1348,12 +1350,12 @@ footer {
           </div>
         </div>
 
-        <!-- APP 6 -->
+        <!-- APP 6: EDTECH SOLUTION (WARNA UNGU SUDAH DISERAGAMKAN MENJADI BLUE THEME) -->
         <div class="app-card" data-aos="fade-up" data-aos-delay="600">
           <div>
             <div class="app-icon-header">
               <div class="app-icon"><i data-lucide="graduation-cap"></i></div>
-              <span class="app-tag" style="background: rgba(168, 85, 247, 0.12); color: #C084FC; border-color: rgba(168, 85, 247, 0.3);">EdTech Solution</span>
+              <span class="app-tag">EdTech Solution</span>
             </div>
             <div class="app-title">EDUKIND — Smart School System</div>
             <p class="app-desc">Platform terpadu untuk efisiensi administrasi sekolah, digitalisasi lembar induk siswa, pelaporan perkembangan belajar, serta integrasi data pendidikan.</p>
