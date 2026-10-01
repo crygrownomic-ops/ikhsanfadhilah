@@ -145,7 +145,6 @@ nav {
 .brand-text-title span { color: var(--accent-sky); }
 .brand-sub { font-size: 10px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; white-space: nowrap; }
 
-/* OPTIMASI GAP NAVLINKS AGAR TIDAK OVERLAP */
 .navlinks {
   display: flex;
   gap: 14px;
@@ -416,7 +415,7 @@ h1 span { color: var(--accent-sky); }
 }
 .section-intro { max-width: 520px; color: var(--text-muted); font-size: 14.5px; }
 
-/* ABOUT EXECUTIVE BOX */
+/* ABOUT EXECUTIVE BOX (OPSI 1 REVISED) */
 .about-box {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -432,6 +431,7 @@ h1 span { color: var(--accent-sky); }
 }
 .about-box:hover { border-color: var(--border-blue); }
 .about-box strong { color: var(--accent-sky); }
+.about-box em { font-style: italic; color: #E2E8F0; }
 
 /* GRID SYSTEMS */
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
@@ -1007,7 +1007,7 @@ footer {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* RESPONSIVE LAYOUT (PADA LAYAR < 1120PX OTOMATIS BERGANTI KE MOBILE MENU UNTUK MENCEGAH TUMPANG TINDIH) */
+/* RESPONSIVE LAYOUT (BREAKPOINT < 1120PX BERGANTI KE MOBILE MENU UNTUK MENCEGAH OVERLAP) */
 .mobile-menu { display: none; cursor: pointer; }
 .mobile-nav-overlay {
   display: none;
@@ -1178,7 +1178,7 @@ footer {
     </div>
   </div>
 
-  <!-- ABOUT SECTION -->
+  <!-- ABOUT SECTION (OPSI 1 TERINTEGRASI KANAN DAN AMAN DARI KONFLIK) -->
   <section id="about" class="section">
     <div class="wrap">
       <div class="section-head" data-aos="fade-up">
@@ -1189,13 +1189,13 @@ footer {
       </div>
       <div class="about-box" data-aos="fade-up" data-aos-delay="150">
         <p>
-          Profesional Operasional, Administrasi & Business Support dengan pengalaman lebih dari 16 tahun di industri FMCG, dealer alat berat, dan perusahaan pembiayaan. Berpengalaman dalam pengelolaan administrasi dan operasional cabang, analisis performa penjualan, pengendalian biaya (cost control), monitoring KPI, serta koordinasi lintas fungsi.
+          Profesional Operasional, Administrasi, dan <em>Business Support</em> dengan pengalaman lebih dari 16 tahun di industri FMCG, dealer alat berat, serta perusahaan pembiayaan. Berpengalaman dalam pengelolaan operasional cabang, analisis performa penjualan, pengendalian biaya (<em>cost control</em>), monitoring KPI, hingga koordinasi lintas fungsi.
         </p>
         <p>
-          Melalui studio <strong>URAI SOLUTIONS</strong>, memiliki kemampuan mendalam dalam mengembangkan dan menyederhanakan proses kerja melalui digitalisasi kustom, otomatisasi administrasi, serta pemanfaatan data untuk membantu meningkatkan efisiensi dan mendukung pengambilan keputusan manajemen.
+          Di luar peran profesional korporasi, saya mendirikan <strong>URAI SOLUTIONS</strong> sebagai studio solusi digital independen. Wadah ini hadir sebagai ruang pengembangan diri dan penyaluran <em>passion</em> di bidang teknologi—tempat saya merancang aplikasi web kustom, otomatisasi alur kerja administrasi, serta alat pengolahan data untuk membantu berbagai pelaku usaha dan mitra meningkatkan efisiensi operasional mereka.
         </p>
         <p>
-          Di luar aktivitas korporasi, aktif merancang proyek aplikasi web independen serta membangun <strong>@korporatpedia</strong> sebagai platform edukasi digital yang membahas produktivitas dunia kerja, operasional, dan analisis performa.
+          Selain itu, saya juga aktif merancang proyek aplikasi web mandiri serta membangun <strong>@korporatpedia</strong> sebagai platform edukasi digital yang membahas produktivitas dunia kerja, operasional, dan analisis performa.
         </p>
       </div>
     </div>
@@ -1350,7 +1350,7 @@ footer {
           </div>
         </div>
 
-        <!-- APP 6: EDTECH SOLUTION (WARNA UNGU SUDAH DISERAGAMKAN MENJADI BLUE THEME) -->
+        <!-- APP 6 -->
         <div class="app-card" data-aos="fade-up" data-aos-delay="600">
           <div>
             <div class="app-icon-header">
