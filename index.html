@@ -93,15 +93,16 @@ a { text-decoration: none; color: inherit; }
 button, input, select, textarea { font-family: inherit; }
 .wrap { width: min(1280px, 94%); margin: auto; }
 
-/* TOPBAR NAVIGATION */
+/* TOPBAR NAVIGATION WITH SCROLLSPY HIGHLIGHT */
 .topbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
-  background: rgba(6, 10, 18, 0.94);
+  background: rgba(6, 10, 18, 0.92);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(56, 189, 248, 0.15);
   transition: all 0.3s ease;
 }
@@ -154,8 +155,23 @@ nav {
   align-items: center;
   white-space: nowrap;
 }
-.navlinks a { transition: color 0.25s ease; }
-.navlinks a:hover { color: var(--accent-sky); }
+.navlinks a { 
+  position: relative;
+  transition: color 0.25s ease; 
+  padding: 4px 0;
+}
+.navlinks a:hover, .navlinks a.active { color: var(--accent-sky); }
+.navlinks a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-sky);
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--accent-sky);
+}
 
 .cta-group { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
 
@@ -187,6 +203,7 @@ nav {
   transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 6px; white-space: nowrap;
 }
 .btn-cta:hover { background: #1653CC; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(30, 104, 246, 0.3); }
+.btn-cta:active { transform: translateY(0); }
 
 /* FLOATING WHATSAPP BUTTON */
 .float-wa {
@@ -427,9 +444,9 @@ h1 span { color: var(--accent-sky); }
   line-height: 1.8;
   font-size: 15.5px;
   color: #cbd5e1;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.about-box:hover { border-color: var(--border-blue); }
+.about-box:hover { border-color: var(--border-blue); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); }
 .about-box strong { color: var(--accent-sky); }
 .about-box em { font-style: italic; color: #E2E8F0; }
 
@@ -438,19 +455,19 @@ h1 span { color: var(--accent-sky); }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 
-/* MOUSE GLOW CARDS */
+/* MOUSE GLOW CARDS WITH GRADIENT HOVER BORDER */
 .glow-card {
   background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px;
-  transition: transform 0.25s, border-color 0.25s; position: relative; overflow: hidden;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; position: relative; overflow: hidden;
   display: flex; flex-direction: column; justify-content: space-between;
 }
 .glow-card::before {
   content: ''; position: absolute; top: var(--mouse-y, -100px); left: var(--mouse-x, -100px);
-  width: 250px; height: 250px; background: radial-gradient(circle, rgba(56, 189, 248, 0.12), transparent 70%);
+  width: 250px; height: 250px; background: radial-gradient(circle, rgba(56, 189, 248, 0.15), transparent 70%);
   transform: translate(-50%, -50%); pointer-events: none; transition: opacity 0.3s; opacity: 0;
 }
 .glow-card:hover::before { opacity: 1; }
-.glow-card:hover { border-color: var(--accent-sky); transform: translateY(-4px); }
+.glow-card:hover { border-color: var(--accent-sky); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.5); }
 
 .service-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent-sky); margin-bottom: 16px; font-weight: 700; }
 .service-title { font-size: 18.5px; font-weight: 700; color: #FFF; margin-bottom: 8px; }
@@ -588,10 +605,10 @@ h1 span { color: var(--accent-sky); }
 .filter-btn {
   background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border); color: var(--text-muted);
   padding: 8px 16px; border-radius: 8px; font-size: 12px; font-weight: 600; font-family: 'JetBrains Mono', monospace;
-  cursor: pointer; transition: all 0.2s;
+  cursor: pointer; transition: all 0.25s ease;
 }
-.filter-btn:hover { background: rgba(255, 255, 255, 0.08); color: #FFF; }
-.filter-btn.active { background: var(--accent-blue); color: #FFF; border-color: var(--accent-blue); }
+.filter-btn:hover { background: rgba(255, 255, 255, 0.08); color: #FFF; transform: translateY(-1px); }
+.filter-btn.active { background: var(--accent-blue); color: #FFF; border-color: var(--accent-blue); box-shadow: 0 4px 12px rgba(30, 104, 246, 0.3); }
 
 /* PORTFOLIO FILTER CARD */
 .port-card {
@@ -793,8 +810,9 @@ h1 span { color: var(--accent-sky); }
 .form-input {
   width: 100%; padding: 12px 16px; border-radius: 8px; background: var(--bg-main);
   border: 1px solid var(--border); color: #FFF; font-size: 14px; margin-bottom: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-.form-input:focus { outline: none; border-color: var(--accent-sky); }
+.form-input:focus { outline: none; border-color: var(--accent-sky); box-shadow: 0 0 10px rgba(56, 189, 248, 0.2); }
 
 /* FOOTER & CONTACT */
 footer {
@@ -846,6 +864,7 @@ footer {
   z-index: 1000;
   background: rgba(4, 8, 16, 0.85);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   align-items: center;
   justify-content: center;
   padding: 20px;
@@ -1007,13 +1026,15 @@ footer {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* RESPONSIVE LAYOUT (BREAKPOINT < 1120PX BERGANTI KE MOBILE MENU UNTUK MENCEGAH OVERLAP) */
+/* RESPONSIVE LAYOUT & GLASSMORPHISM MOBILE DRAWER */
 .mobile-menu { display: none; cursor: pointer; }
 .mobile-nav-overlay {
   display: none;
   position: fixed;
   inset: 0;
-  background: var(--bg-main);
+  background: rgba(6, 10, 18, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: 45;
   padding: 90px 24px;
   flex-direction: column;
@@ -1047,7 +1068,7 @@ footer {
   </svg>
 </a>
 
-<!-- TOPBAR NAVIGATION -->
+<!-- TOPBAR NAVIGATION WITH SCROLLSPY LINKS -->
 <header class="topbar">
   <div class="wrap">
     <nav>
@@ -1061,14 +1082,14 @@ footer {
         </div>
       </a>
       <div class="navlinks">
-        <a href="#about">Tentang</a>
-        <a href="#services">Layanan</a>
-        <a href="#flagship">Aplikasi Unggulan</a>
-        <a href="#portfolio">Portofolio (14)</a>
-        <a href="#expertise">Kompetensi</a>
-        <a href="#experience">Pengalaman</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Kontak</a>
+        <a href="#about" class="nav-link">Tentang</a>
+        <a href="#services" class="nav-link">Layanan</a>
+        <a href="#flagship" class="nav-link">Aplikasi Unggulan</a>
+        <a href="#portfolio" class="nav-link">Portofolio (14)</a>
+        <a href="#expertise" class="nav-link">Kompetensi</a>
+        <a href="#experience" class="nav-link">Pengalaman</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Kontak</a>
       </div>
       <div class="cta-group">
         <a class="navcta" href="https://www.linkedin.com/in/uikhsanf/" target="_blank">
@@ -1178,7 +1199,7 @@ footer {
     </div>
   </div>
 
-  <!-- ABOUT SECTION (OPSI 1 TERINTEGRASI KANAN DAN AMAN DARI KONFLIK) -->
+  <!-- ABOUT SECTION (OPSI 1 REVISED) -->
   <section id="about" class="section">
     <div class="wrap">
       <div class="section-head" data-aos="fade-up">
@@ -1952,7 +1973,7 @@ footer {
   </div>
 </div>
 
-<!-- SCRIPT AOS ANIMATION & ALL INTERACTION HANDLERS -->
+<!-- SCRIPT AOS ANIMATION & ALL INTERACTION HANDLERS (WITH SCROLLSPY) -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   // Inisialisasi Vektor Icon Lucide & AOS Animation
@@ -1961,6 +1982,30 @@ footer {
     duration: 800,
     once: true,
     easing: 'ease-out-cubic'
+  });
+
+  // SCROLLSPY FUNCTION: Menyalahkan link navigasi sesuai posisi layar
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.navlinks .nav-link');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    const scrollPosition = window.scrollY + 120; // Offset topbar
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
   });
 
   // MOUSE GLOW TRACKING FOR GLOW CARDS
